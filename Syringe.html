@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .Syringe {
+      /* 長針管 */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 725px;
+      height: 100px;
+      background: #fff;
+      border: 0.5px solid gray;
+      border-radius: 0px 10px 10px 0px;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 10%, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.0)60%);
+      font-family: "微軟正黑體";
+      font-size: 1rem;
+      color: rgb(177, 177, 177);
+      font-weight: bold;
+      line-height: 190px;
+    }
+
+    .Syringe::before {
+      /* 針尖 */
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 105%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      border: 1px solid black
+    }
+
+    .Syringe::after {
+      /* 針管 */
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 140px;
+      background-image: linear-gradient(90deg, white 45%, black 10%, black 58%, rgb(253, 253, 171) 50%);
+      border: 0.5px solid gray;
+      z-index: -1;
+    }
+
+    .Needle {
+      /* 漸層 */
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 80px;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 10%, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.0)60%);
+    }
+
+
+    .Needle::before {
+      /* 按柄 */
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 107%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 130px;
+      background: rgb(245, 245, 245);
+      border: 0.5px solid gray;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.0) 10%, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.0)60%);
+      border-radius: 10px
+    }
+
+    .Needle::after {
+      /* 刻度 */
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      transform: translate(-50%, -50%);
+      height: 20px;
+      width: 600px;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 24px, gray 1px);
+      background-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Syringe">
+    <div class="Needle">MadeinTaiwan</div>
+  </div>
+</body>
+
+</html>
